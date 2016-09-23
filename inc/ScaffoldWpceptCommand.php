@@ -12,17 +12,23 @@ class ScaffoldWpceptCommand
      *
      * ## OPTIONS
      *
-     * [--URL=<URL>]
+     * [--default-url=<url>]
      * : set the url of acceptance.suite.yml
+     * ---
+     * default: http://localhost
+     * ---
      *
-     * [--adminUserName=<adminUserName>]
+     * [--admin-user-name=<adminUserName>]
      * : admin User of WordPress
      *
-     * [--adminPassword=<adminPassword>]
+     * [--admin-password=<adminPassword>]
      * : admin password of WordPress
      *
-     * [--adminPath=<adminPath>]
+     * [--admin-path=<adminPath>]
      * : Path for administrator's page
+     * ---
+     * default: /wp-admin
+     * ---
      *
      * ---
      * default: success
@@ -53,10 +59,10 @@ class ScaffoldWpceptCommand
         }
 
         $defaults = array(
-            'URL' => 'http://localhost',
-            'adminUserName' => '',
-            'adminPassword' => '',
-            'adminPath' => '/wp-admin'
+            'default-url' => 'http://localhost',
+            'admin-user-name' => '',
+            'admn-password' => '',
+            'admin-path' => '/wp-admin'
         );
         $assoc_args = array_merge($defaults, $assoc_args);
 
@@ -66,6 +72,8 @@ class ScaffoldWpceptCommand
         file_put_contents(
             $acceptance_path,
             Utils\mustache_render( "{$template_path}/acceptance.suite.yml.mustache", $assoc_args ));
+
+        exec('vendor/bin/wpcept build');
 
         WP_CLI::success("Created files for wpcept.");
     }
