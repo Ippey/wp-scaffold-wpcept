@@ -8,7 +8,7 @@ This package implements following command.
 ### wp scaffold wpcept
 Install wpcept and generate files needs for wpcept.
 ```
-wp scaffold wpcept --URL=http://localhost:8080 --adminUserName=YOUR_ADMIN_NAME --adminPassword=YOUR_ADMIN_PASSWORD --adminPath=/wp-admin
+wp scaffold wpcept --default-url=http://localhost:8080 --admin-user-name=YOUR_ADMIN_NAME --admin-password=YOUR_ADMIN_PASSWORD --admin-path=/wp-admin
 ```
 
 OPTIONS
