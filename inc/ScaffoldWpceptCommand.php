@@ -51,7 +51,6 @@ class ScaffoldWpceptCommand
         if (empty($result)) {
             WP_CLI::error("not found composer.");
         }
-//        $admin = get_site_option( 'site_admins', array('admin') );
 
         $defaults = array(
             'URL' => 'http://localhost',
@@ -60,14 +59,14 @@ class ScaffoldWpceptCommand
             'adminPath' => '/wp-admin'
         );
         $assoc_args = array_merge($defaults, $assoc_args);
-        print_r($assoc_args);
+
+        exec('composer require lucatume/wp-browser --dev');
+        exec('vendor/bin/wpcept bootstrap');
 
         file_put_contents(
             $acceptance_path,
             Utils\mustache_render( "{$template_path}/acceptance.suite.yml.mustache", $assoc_args ));
 
-//        exec('composer require lucatume/wp-browser --dev');
-//        exec('vendor/bin/wpcept bootstrap');
         WP_CLI::success("Created files for wpcept.");
     }
 }
