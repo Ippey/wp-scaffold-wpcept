@@ -28,4 +28,4 @@ OPTIONS
 
 ## Install
 Installing this package requires WP-CLI v0.23.0 or greater. Update to the latest stable release with ```wp cli update```.  
-Once you've done so, you can install this package with wp package install ```Ippey/wp-scaffold-wpcept```.  
+Once you've done so, you can install this package with ```wp package install ippey/wp-scaffold-wpcept```.  
