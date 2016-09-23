@@ -1,4 +1,4 @@
-Ippey/wp-scaffold-wpcept
+ippey/wp-scaffold-wpcept
 ---
 Scaffold wpcept
 
