@@ -1,8 +1,7 @@
 <?php
 
-namespace WP_CLI;
+namespace ippey;
 use WP_CLI;
-use WP_CLI\Process;
 use WP_CLI\Utils;
 
 class ScaffoldWpceptCommand

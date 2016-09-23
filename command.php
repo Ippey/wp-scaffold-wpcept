@@ -6,4 +6,4 @@ if ( ! class_exists( 'WP_CLI' ) ) {
 
 require_once __DIR__ . '/inc/ScaffoldWpceptCommand.php';
 
-WP_CLI::add_command( 'scaffold wpcept', array( 'WP_CLI\ScaffoldWpceptCommand', 'wpcept' ) );
+WP_CLI::add_command( 'scaffold wpcept', array( 'ippey\ScaffoldWpceptCommand', 'wpcept' ) );
