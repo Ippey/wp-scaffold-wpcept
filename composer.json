@@ -10,7 +10,7 @@
             "homepage": "https://unplat.info"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "autoload": {
         "files": [ "command.php" ]
     },
