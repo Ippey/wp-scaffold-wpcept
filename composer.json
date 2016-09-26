@@ -16,10 +16,10 @@
         "files": [ "command.php" ]
     },
     "require": {
-        "wp-cli/wp-cli": "^0.23.0"
+        "wp-cli/wp-cli": "^0.23.0@dev"
     },
     "require-dev": {
-        "behat/behat": "~2.5"
+        "behat/behat": "~2.5@dev"
     },
     "extra": {
         "commands": [
